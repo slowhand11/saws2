@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 FireGento e.V. - All rights reserved.
+ * See LICENSE.md bundled with this module for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="fastsimpleimport" translate="label" type="text" sortOrder="310" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>FastSimpleImport 2 / SAWS Connector</label>
+            <tab>service</tab>
+            <resource>FireGento_FastSimpleImport::config_fastsimpleimport</resource>
+            <group id="default" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Default Values</label>
+                <field id="behavior" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Behavior</label>
+                    <source_model>saws\sawsconnector\Model\Config\Source\Behavior</source_model>
+                </field>
+                <field id="entity" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Entity Type</label>
+                    <source_model>Magento\ImportExport\Model\Source\Import\Entity</source_model>
+                </field>
+                <field id="validation_strategy" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Validation Strategy</label>
+                    <source_model>saws\sawsconnector\Model\Config\Source\ValidationStrategy</source_model>
+                </field>
+                <field id="allowed_error_count" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Allowed Error Count</label>
+                    <frontend_class>validate-number</frontend_class>
+                </field>
+                <field id="import_security_token" translate="label" type="text" sortOrder="41" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Security Token</label>
+                </field>
+                <field id="import_images_file_dir" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Import Images Directory</label>
+                </field>
+                <field id="ignore_duplicates" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Ignore duplicates</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

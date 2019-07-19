@@ -1,0 +1,30 @@
+{
+  "name": "saws/sawsconnector",
+  "description": "CONTENTSERV SawsConnector module",
+  "homepage": "http://saws.de",
+  "require": {
+    "php": "~7.0.13|~7.1.0|~7.2.0|~7.3.0",
+    "magento/magento2-base": "~2.2.0|~2.3.0"
+  },
+  "type": "magento2-module",
+  "version":"1.5.5",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Team FireGento (Version 1.1.0)",
+      "email": "team@firegento.com"
+    },
+    {
+      "name": "Team SAWS",
+      "email": "support@saws.de"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "saws\\sawsconnector\\": ""
+    }
+  }
+}
