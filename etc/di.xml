@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 FireGento e.V. - All rights reserved.
+ * See LICENSE.md bundled with this module for license details.
+
+ * Copyright © 2017 SAWS GmbH & Co. KG - All rights reserved.
+ * See LICENSE.md bundled with this module for license details.
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+  <preference for="Magento\CatalogImportExport\Model\Import\Product\Type\Factory" type="saws\sawsconnector\Model\Import\Product\Type\Factory" />
+<!--
+  <preference for="Magento\CatalogImportExport\Model\Import\Product\Type\Simple" type="saws\sawsconnector\Model\Import\Product\Type\Simple" />
+  <preference for="Magento\CatalogImportExport\Model\Import\Product\Type\Virtual" type="saws\sawsconnector\Model\Import\Product\Type\Virtual" />
+  <preference for="Magento\DownloadableImportExport\Model\Import\Product\Type\Downloadable" type="saws\sawsconnector\Model\Import\Product\Type\Downloadable" />
+-->
+
+  <preference for="Magento\GroupedImportExport\Model\Import\Product\Type\Grouped" type="saws\sawsconnector\Model\Import\Product\Type\Grouped" />
+  <preference for="Magento\ConfigurableImportExport\Model\Import\Product\Type\Configurable" type="saws\sawsconnector\Model\Import\Product\Type\Configurable" />
+  <preference for="Magento\BundleImportExport\Model\Import\Product\Type\Bundle" type="saws\sawsconnector\Model\Import\Product\Type\Bundle" />
+
+
+  <preference for="Magento\CatalogImportExport\Model\Import\Product\Validator\Media" type="saws\sawsconnector\Model\Import\Product\Validator\Media" />
+  <preference for="Magento\CatalogImportExport\Model\Import\Product\CategoryProcessor" type="saws\sawsconnector\Model\Import\Product\CategoryProcessor" />
+
+
+  <preference for="Magento\CatalogImportExport\Model\Import\Product" type="saws\sawsconnector\Model\Import\Product" />
+  <preference for="Magento\CatalogImportExport\Model\Import\Product\Validator" type="saws\sawsconnector\Model\Import\Product\Validator" />
+
+  <preference for="\saws\sawsconnector\Model\Adapters\ImportAdapterFactoryInterface" type="saws\sawsconnector\Model\Adapters\ArrayAdapterFactory"/>
+  <preference for="\saws\sawsconnector\Api\SawsConnectorInterface" type="\saws\sawsconnector\Model\SawsConnector" />
+
+</config>
